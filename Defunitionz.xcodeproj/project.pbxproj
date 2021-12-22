@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A9054AB277371CC001EA042 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9054AA277371CC001EA042 /* CustomNavView.swift */; };
 		0A957016277304F700F072EE /* DefunitionzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A957015277304F700F072EE /* DefunitionzApp.swift */; };
 		0A957018277304F700F072EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A957017277304F700F072EE /* ContentView.swift */; };
 		0A95701A277304F800F072EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A957019277304F800F072EE /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A9054AA277371CC001EA042 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		0A957012277304F700F072EE /* Defunitionz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Defunitionz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A957015277304F700F072EE /* DefunitionzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefunitionzApp.swift; sourceTree = "<group>"; };
 		0A957017277304F700F072EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				0A957017277304F700F072EE /* ContentView.swift */,
-				0A9054AA277371CC001EA042 /* CustomNavView.swift */,
 				0A9570412773052B00F072EE /* DefinitionDetailView.swift */,
 				0A9570792773056000F072EE /* NewDefinitionView.swift */,
 			);
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A95707C2773057000F072EE /* DefData.swift in Sources */,
-				0A9054AB277371CC001EA042 /* CustomNavView.swift in Sources */,
 				0A95707A2773056000F072EE /* NewDefinitionView.swift in Sources */,
 				0A9570422773052B00F072EE /* DefinitionDetailView.swift in Sources */,
 				0A957018277304F700F072EE /* ContentView.swift in Sources */,
