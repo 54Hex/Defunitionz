@@ -11,7 +11,9 @@ class defData: ObservableObject {
     @Published var definitions: [Definition] = []
     
     
-    let sampleDefinitions = [Definition(name: "", description: "")]
+    let sampleDefinitions = [Definition(name: "1. Intro", description: "Hello. Welcome to Defunitionz, an app created in a day because it was made with a random idea."),
+                             Definition(name: "2. How to use", description: "Edit allows you to delete any of your definitions. Or you could just swipe right at the definition you would want to delete/remove."),
+                             Definition(name: "3. What you can do", description: "Pretty sure there's nothing much you could do here except for adding definitions such as mathematical formulas so that you can memorise and apply it for your own studies, or you could use it to store english definitions that you are unsure of.")]
     
     
     func getArchiveURL() -> URL {

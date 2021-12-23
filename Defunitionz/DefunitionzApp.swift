@@ -10,6 +10,7 @@ import SwiftUI
 struct DefunitonzApp: App {
     
     @ObservedObject var defsData = defData()
+
     @Environment(\.scenePhase) var scenePhase
 
     

@@ -35,7 +35,7 @@ struct NewDefinitationView: View {
                             .multilineTextAlignment(.leading)
                     }
                 }
-                
+  
             }
             
             .navigationTitle("New Definition")

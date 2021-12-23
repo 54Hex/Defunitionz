@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
- 
+    
+    
     @State var isNewDefinitionPresented = false
     @State var showSheet: Bool = false
-
+    
     //    @Environment(\.presentationMode) var presentationMode
     
     
     @State var definition = Definition(name: "", description: "")
     @Binding var definitions: [Definition]
     
-    @State var searchText = ""
-    @State var searching = false
     
     var body: some View {
-        
         
         NavigationView {
             List {
@@ -30,12 +28,15 @@ struct ContentView: View {
                 ForEach(definitions) { definition in
                     let definitationIndex = definitions.firstIndex(of: definition)!
                     
+                    
                     NavigationLink(destination: DefinitationDetailView(definition: $definitions[definitationIndex])) {
                         
-                        HStack {
-                            Text(definition.name)
-                        }
+                            HStack {
+                                Text(definition.name)
+                            }
+                        
                     }
+                
                 }
                 .onDelete { offsets in
                     definitions.remove(atOffsets: offsets)
@@ -44,7 +45,7 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Defunitionz")
-    
+            
             .toolbar {
                 //edit
                 ToolbarItem(placement: .navigation) {
@@ -66,25 +67,27 @@ struct ContentView: View {
                         Image(systemName: "gear").foregroundColor(.gray)
                     })
                 }
-               
+                
             }
             .halfSheet(showSheet: $showSheet) {
                 NavigationView {
                     List {
-                        Section {
-                            HStack {
-                                Image(systemName: "person.fill").foregroundColor(.gray)
-                                Text("Made by ")
-                                Spacer()
-                                Text("Wei Xuan")
+                        Form {
+                            Section {
+                                HStack {
+                                    Image(systemName: "person.fill").foregroundColor(.gray)
+                                    Text("Made by ")
+                                    Spacer()
+                                    Text("Wei Xuan")
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "gear").foregroundColor(.gray)
+                                    Text("Version")
+                                    Spacer()
+                                    Text("1.0")
+                                }
                             }
-                            HStack {
-                                Image(systemName: "gear").foregroundColor(.gray)
-                                Text("Version")
-                                Spacer()
-                                Text("1.0")
-                            }
-                            
                         }
                     }
                     .navigationTitle("Information")
@@ -98,12 +101,15 @@ struct ContentView: View {
             }
             
         }
-       
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(definitions: .constant([]))
+        ContentView(definitions: .constant([Definition(name: "1. Intro", description: "Hello. Welcome to Defunitionz, an app created in a day because it was made with a random idea."),
+                                                       Definition(name: "2. Tutorial", description: "Edit allows you to delete any of your definitions. Or you could just swipe right at the definition you would want to delete/remove."),
+                                            Definition(name: "3. What you can do", description: "Pretty sure there's nothing much you could do here except for adding definitions such as mathematical formulas so that you can memorise and apply it for your own studies, or you could use it to store english definitions that you are unsure of.")]))
     }
 }
+
