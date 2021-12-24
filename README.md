@@ -1,5 +1,5 @@
 # Defunitionz
 
-Random project.
+Random project, for self revision probably? 
 
 Lang: Swift 
